@@ -1,33 +1,30 @@
-function cardAdicionar() {
-    const [valorImput, setValorImput] = useState('');
+import React, { useState } from 'react';
 
-    var manipulaAlteracaoImput = (e) => {
-        setValorImput(e.target.value);
-    };
-    var handleButtonClick =()=> {
-        setValorImput(valorImput);
-    };
+function CardAdicionar() {
+  const [valorImput, setValorImput] = useState('');
 
-    return (
-      <>
-        <div>
-            <imput 
-            type="text"
-            placeholder ="adicionar tarefa"
-            value={valorImput}
-            onChange={manipulaAlteracaoImput}
-            ></imput>
-            <button onChange={() => setValorImput((valorImput) => {
+  const manipulaAlteracaoImput = (e) => {
+    setValorImput(e.target.value);
+  };
 
-            }
-                )}>
-            </button>
-          
-          
-        </div>
-        <h1>Tarefas</h1>
-        
-      </>
-    )
-  }
-  export default cardAdicionar;
+  const handleButtonClick = () => {
+    setValorImput(valorImput);
+  };
+
+  return (
+    <>
+      <div>
+        <input 
+          type="text"
+          placeholder="adicionar tarefa"
+          value={valorImput}
+          onChange={manipulaAlteracaoImput}
+        />
+        <button onClick={handleButtonClick}>Adicionar</button>
+      </div>
+      <h1>Tarefas</h1>
+    </>
+  );
+}
+
+export default CardAdicionar;
