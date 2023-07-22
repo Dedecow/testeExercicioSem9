@@ -22,7 +22,7 @@ function CardAdicionar() {
         />
         <button onClick={handleButtonClick}>Adicionar</button>
       </div>
-      <h1>Tarefas</h1>
+      <h1>Tarefas{valorImput}</h1>
     </>
   );
 }
