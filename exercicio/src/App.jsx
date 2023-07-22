@@ -8,7 +8,6 @@ function App() {
         <h1>Tarefa 1 </h1>
         <CardAdicionar />
       </div>
-      <h1>Tarefas</h1>
     </>
   );
 }
