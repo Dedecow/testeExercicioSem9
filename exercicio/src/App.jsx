@@ -1,7 +1,11 @@
-import React from 'react';
 import CardAdicionar from './components/CardAdicionar';
+import {useState} from 'react';
 
 function App() {
+  const [listaTarefas, setListaTarefas] = useState ([
+    {textoTarefa: "Tarefa 1", finalizado: false}
+  ])
+
   return (
     <>
       <div>
