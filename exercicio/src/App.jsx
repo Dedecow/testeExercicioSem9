@@ -3,14 +3,18 @@ import {useState} from 'react';
 
 function App() {
   const [listaTarefas, setListaTarefas] = useState ([
-    {textoTarefa: "Tarefa 1", finalizado: false}
+    {Id: 1, textoTarefa: "Tarefa 1", finalizado: false}
   ])
+
+  var adicionarTarefa = (texto) => {
+    var novaTarefa = {Id:listaTarefas.lenght +1, textoTarefa: "Tarefa1", finalizado: false}
+    setListaTarefas = [...listaTarefas, setListaTarefas]
+  }
 
   return (
     <>
-      <div>
-        <h1>Tarefa 1 </h1>
-        <CardAdicionar />
+      <CardAdicionar/>
+      <div>{ listaTarefas.map(tarefa => {<spam>  {tarefa.textoTarefa} </spam>})}
       </div>
     </>
   );
